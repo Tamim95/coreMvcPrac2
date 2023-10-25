@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show</title>
+</head>
+<body>
+    <h1>Saint Josep School and College,Dhaka-1000</h1>
+    <h4>Go our Department</h4>
+    <a asp-controller="Student" asp-action="Science">Dept. of Science</a> |
+    <a asp-controller="Student" asp-action="Arts">Dept. of Ats</a> |
+    <a asp-controller="Student" asp-action="Business">Dept. of Business</a> |
+
+    <h1>@ViewBag.Message</h1>
+    <h3>GPA 5 Students List and Info</h3>
+    @foreach(var item in ViewBag.StudentList)
+    {
+        <ul>
+            <li>Id: @item.Id</li>
+            <li>Name: @item.Name</li>
+            <li>School: @item.School</li>
+            <li>Department: @item.Department</li>
+        </ul>
+        
+    };
+
+    <hr />
+    <footer>Name:Testing MVC core app | Phone: 01736209575 | Email: tamim.cse14@gmail.com </footer>
+</body>
+</html>
